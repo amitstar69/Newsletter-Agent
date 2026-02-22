@@ -1231,21 +1231,6 @@
     // In production: send to your email service here
   }
 
-  // Copy tweets
-  const tweetTexts = [
-    `I've been spending 10 hours a week writing my newsletter.\n\nI'm building something that gets it down to 20 minutes.\n\nAn AI agent that monitors your niche 24/7 and drafts full issues in your voice — delivered to your WhatsApp Monday morning.\n\nWaitlist opens today. First 50 get 40% off.\n\n↓ Link in replies`,
-    `Hot take: most newsletter writers aren't writers.\n\nThey're researchers, editors, formatters, schedulers — who occasionally get to write.\n\nThe actual writing is maybe 15% of the job.\n\nI'm building a tool that handles the other 85% so you can be a writer again.\n\nJoin the waitlist (link in bio) — 23 spots left at founding price.`,
-    `This Monday I woke up and my newsletter was already written.\n\nFull draft. My voice. Right angle. Sources cited.\n\nAll I did was edit for 18 minutes and hit publish.\n\nAn AI agent ran overnight and did everything else.\n\nI'm packaging this exact setup and selling it. DM me "MACHINE" if you want early access.`
-  ];
-
-  function copyTweet(btn, idx) {
-    navigator.clipboard.writeText(tweetTexts[idx]).then(() => {
-      btn.textContent = 'COPIED ✓';
-      btn.classList.add('copied');
-      setTimeout(() => { btn.textContent = 'COPY'; btn.classList.remove('copied'); }, 2000);
-    });
-  }
-
   // Set today's date
   document.getElementById('today-date').textContent = new Date().toLocaleDateString('en-US', {
     weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'
